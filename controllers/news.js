@@ -5,7 +5,16 @@ var multipart = require('connect-multiparty');
 var multipartMiddleware = multipart();
 /* GET home page. */
 
-	router.get('/', function(req, res, next) {
+  router.use(function (req, res, next) {    
+    if (req.isAuthenticated()) {
+      return next();
+    } else {
+      return res.redirect('/login');
+    }
+    next();
+  });
+  
+	router.get('/', function(req, res) {
 		News.find({}, function(err, data){
 			if(err) {
 				console.log(err);
@@ -17,7 +26,7 @@ var multipartMiddleware = multipart();
 		});
 	});
 
-	router.get('/add', function (req, res, next) {
+	router.get('/add', function (req, res) {
 		return res.render('newsForm');
 	});
 	
@@ -35,3 +44,5 @@ var multipartMiddleware = multipart();
 	});
 
 module.exports = router;
+
+

@@ -10,9 +10,20 @@ var users = require('./controllers/users');
 var news = require('./controllers/news');
 var login = require('./controllers/login');
 var register = require('./controllers/register');
-expressValidator = require('express-validator');
+var expressValidator = require('express-validator');
 var database = require('./mongo')();
+var passport = require('passport');
 var app = express();
+var session = require('express-session');
+
+app.use(session({
+  secret: 'secret',
+  saveUninitialized: true,
+  resave: true 
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
