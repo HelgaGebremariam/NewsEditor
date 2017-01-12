@@ -8,6 +8,9 @@ var bodyParser = require('body-parser');
 var index = require('./controllers/index');
 var users = require('./controllers/users');
 var news = require('./controllers/news');
+var login = require('./controllers/login');
+var register = require('./controllers/register');
+expressValidator = require('express-validator');
 var database = require('./mongo')();
 var app = express();
 
@@ -20,13 +23,15 @@ app.set('view engine', 'jade');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(expressValidator());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
 app.use('/news', news);
-
+app.use('/login', login);
+app.use('/register', register);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

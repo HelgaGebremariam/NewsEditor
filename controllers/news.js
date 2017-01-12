@@ -15,18 +15,6 @@ var multipartMiddleware = multipart();
 				
 			}
 		});
-	  
-			  // var n = new News();
-			  // n.Author = "Luce"
-			  // n.description = "Luslick";
-			  // n.url = "url";
-			  // n.urlToImage = "";
-			  // n.save(function (err, doc) {
-					// if(err) alert("slefk");
-					// else
-						// console.log(doc);
-			  // });
-
 	});
 
 	router.get('/add', function (req, res, next) {

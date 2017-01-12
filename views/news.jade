@@ -2,8 +2,9 @@ extends layout
 
 block content
 	h1= title
-	a(href='/news/add') "Add"
+	a(href='/news/add') Add
 	for n in news
-		a(href=n.url) n.title
+		h3= n.title
 		p= n.description
+		img(src= n.urlToImage)
 		
