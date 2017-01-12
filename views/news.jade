@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	h1= title
+	a(href='/news/add') "Add"
+	for n in news
+		a(href=n.url) n.title
+		p= n.description
+		
