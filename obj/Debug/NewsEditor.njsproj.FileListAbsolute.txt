@@ -1,0 +1,2 @@
+F:\express\in\obj\Debug\NewsEditor.njsprojResolveAssemblyReference.cache
+F:\express\in\bin\Microsoft.NodejsTools.WebRole.dll
