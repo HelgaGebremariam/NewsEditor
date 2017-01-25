@@ -32,7 +32,6 @@ var multipartMiddleware = multipart();
 	
 	router.post('/', multipartMiddleware, function (req, res) {
 		var n = new News(req.body);
-		console.log("body" + req.body);
 		n.save(function (err, doc) {
 			if (err)
 			{

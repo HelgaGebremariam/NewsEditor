@@ -16,6 +16,9 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
+    <Compile Include="public\javascripts\AuthorizationDataSender.js" />
+    <Compile Include="public\javascripts\jquery-3.1.1.min.js" />
+    <Compile Include="public\javascripts\NewsContentSender.js" />
     <Content Include="package.json" />
     <Compile Include="app.js" />
     <Compile Include="mongo.js" />
@@ -28,10 +31,13 @@
     <Compile Include="models\users.js" />
     <Content Include="views\error.jade" />
     <Content Include="views\index.jade" />
+    <Content Include="views\index.jsx" />
     <Content Include="views\layout.jade" />
     <Content Include="views\login.jade" />
+    <Content Include="views\login.jsx" />
     <Content Include="views\news.jade" />
     <Content Include="views\newsForm.jade" />
+    <Content Include="views\newsForm.jsx" />
     <Content Include="views\register.jade" />
     <Content Include="public\stylesheets\style.css" />
   </ItemGroup>
@@ -39,6 +45,7 @@
     <Folder Include="bin" />
     <Folder Include="controllers" />
     <Folder Include="models" />
+    <Folder Include="script\" />
     <Folder Include="public" />
     <Folder Include="public\images" />
     <Folder Include="public\javascripts" />
@@ -47,6 +54,7 @@
     <Folder Include="typings\globals\" />
     <Folder Include="typings\globals\express-session\" />
     <Folder Include="typings\globals\express-validator\" />
+    <Folder Include="typings\globals\jquery\" />
     <Folder Include="typings\globals\mongoose\" />
     <Folder Include="typings\globals\node\" />
     <Folder Include="typings\globals\passport\" />
@@ -55,6 +63,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="typings\globals\express-session\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\express-validator\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\jquery\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\mongoose\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\node\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\passport\index.d.ts" />
