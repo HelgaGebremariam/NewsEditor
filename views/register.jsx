@@ -1,7 +1,7 @@
 ﻿var React = require('react');
 
 module.exports = React.createClass({
-    displayName: 'Login',
+    displayName: 'Register',
 
     render: function () {
         return (
@@ -11,25 +11,31 @@ module.exports = React.createClass({
                     </script>
                     <script src="/javascripts/AuthorizationDataSender.js">
                     </script>
-                    
+
                 </head>
                 <body id='body-wrapper'>
                     <div>
 
-                        <h1>Login</h1>
+                        <h1>Register</h1>
 
-                        <form id="login-form" name="login-estimation">
+                        <form id="register-form" name="register-estimation">
                             <div className="input">
                                 <span className="label">Email</span>
                                 <input id="email" type="text" name="text" />
                             </div>
 
                             <div className="input">
-                                <span className="label">Password</span>
-                                <input id="password" name="text" type="password" cols="40" rows="5"/>
+                                <span className="label">Name</span>
+                                <input id="name" name="text" type="text" cols="40" rows="5" />
                             </div>
+
+                            <div className="input">
+                                <span className="label">Password</span>
+                                <input id="password" type="password" name="text" cols="40" rows="5" />
+                            </div>
+
                             <div className="actions">
-                                <input id="login-btn" type="button" value="login" />
+                                <input id="register-btn" type="button" value="register" />
                             </div>
                         </form>
                     </div>

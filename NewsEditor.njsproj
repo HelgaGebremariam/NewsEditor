@@ -29,17 +29,15 @@
     <Compile Include="controllers\users.js" />
     <Compile Include="models\news.js" />
     <Compile Include="models\users.js" />
-    <Content Include="views\error.jade" />
-    <Content Include="views\index.jade" />
+    <Content Include="views\article.jsx" />
+    <Content Include="views\error.jsx" />
     <Content Include="views\index.jsx" />
-    <Content Include="views\layout.jade" />
     <Content Include="views\login.jade" />
     <Content Include="views\login.jsx" />
-    <Content Include="views\news.jade" />
-    <Content Include="views\newsForm.jade" />
+    <Content Include="views\news.jsx" />
     <Content Include="views\newsForm.jsx" />
-    <Content Include="views\register.jade" />
     <Content Include="public\stylesheets\style.css" />
+    <Content Include="views\register.jsx" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin" />

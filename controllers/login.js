@@ -36,7 +36,7 @@ var LocalStrategy = require('passport-local').Strategy;
 
   router.post('/',
    passport.authenticate('local', 
-    { successRedirect: '/news', failureRedirect: '/login', failureFlash: true  }
+    { successRedirect: '/news', failureRedirect: '/login', flash: true  }
    ),
    function (req, res) {
     res.redirect('/news');
